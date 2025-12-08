@@ -1,0 +1,3 @@
+"""
+Practice app package initialization.
+"""

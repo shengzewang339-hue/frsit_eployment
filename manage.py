@@ -6,6 +6,11 @@ import sys
 
 def main():
     """Run administrative tasks."""
+    # 添加项目根目录到Python路径
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    if current_dir not in sys.path:
+        sys.path.insert(0, current_dir)
+    
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'frsit_eployment_.settings')
     try:
         from django.core.management import execute_from_command_line
