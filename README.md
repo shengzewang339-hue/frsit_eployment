@@ -1,6 +1,6 @@
-# FRSIT 部署项目
+# FRSIT 部署项目 (简化测试版)
 
-这是一个使用Django和Docker Compose部署的项目。
+这是一个使用Django和Docker Compose部署的简化测试项目，专为快速验证而设计。
 
 ## 项目结构
 
@@ -31,7 +31,7 @@ docker compose up --build
 ```
 
 4. 访问应用：
-   - Django应用: http://localhost:8000
+   - 测试页面: http://localhost:8000/practice/hello/
    - Admin界面: http://localhost:8000/admin
 
 ## 停止服务
@@ -40,19 +40,27 @@ docker compose up --build
 docker-compose down
 ```
 
-## 数据库
+## 本地开发
 
-项目使用PostgreSQL数据库，默认配置为：
-- 数据库名: frsit_db
-- 用户名: frsit_user
-- 密码: frsit_password
-- 端口: 5432
+如果您想在本地运行而不用Docker：
 
-## 环境变量
+1. 安装依赖：
+```bash
+pip install -r requirements.txt
+```
 
-可以通过环境变量覆盖默认的数据库配置：
-- POSTGRES_DB
-- POSTGRES_USER
-- POSTGRES_PASSWORD
-- DB_HOST
-- DB_PORT
+2. 运行开发服务器：
+```bash
+python manage.py runserver
+```
+
+3. 访问应用：
+   - 测试页面: http://localhost:8000/practice/hello/
+   - Admin界面: http://localhost:8000/admin
+
+## 特点
+
+- 简化配置，仅包含最基本的Django功能
+- 使用SQLite数据库，无需额外的数据库服务
+- 不包含复杂的前端页面或静态文件
+- 专为快速测试和验证设计
