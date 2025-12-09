@@ -30,7 +30,7 @@ docker-compose up --build
 或者使用较新版本的Docker：
 
 ```bash
-docker compose up --build
+docker compose up --build   #sdasd 
 ```
 
 4. 访问应用：
